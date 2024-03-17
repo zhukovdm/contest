@@ -1,3 +1,9 @@
+/**
+ * https://cses.fi/problemset/task/1625/
+ *
+ * The goal is to optimize backtracking solution and cut off bad branches early.
+ */
+
 #include <iostream>
 #include <map>
 #include <set>
@@ -39,7 +45,6 @@ auto solve(int row, int col, int steps_done) -> int
     int cnt = 0;
 
     if (path[steps_done] == Q) {
-
         for (int i = 0; i < 4; ++i) {
             int r = row + r_dir[i];
             int c = col + c_dir[i];
@@ -55,7 +60,6 @@ auto solve(int row, int col, int steps_done) -> int
     }
 
     else {
-
         if (path[steps_done] == L) {
             --col;
         }
@@ -85,7 +89,6 @@ auto main(int, char **) -> int
 {
     std::ios::sync_with_stdio(false);
     std::cin.tie(nullptr);
-    std::cout.tie(nullptr);
 
     std::cin >> path;
 
