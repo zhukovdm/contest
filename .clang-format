@@ -1,0 +1,9 @@
+AccessModifierOffset: -4
+AllowShortFunctionsOnASingleLine: None
+AllowShortIfStatementsOnASingleLine: false
+AlwaysBreakTemplateDeclarations: Yes
+BasedOnStyle: LLVM
+BreakBeforeBraces: Stroustrup
+ColumnLimit: 120
+IndentWidth: 4
+TabWidth: 4
