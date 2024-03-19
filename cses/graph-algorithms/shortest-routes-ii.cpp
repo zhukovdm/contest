@@ -1,3 +1,7 @@
+/**
+ * https://cses.fi/problemset/task/1672
+ */
+
 #include <algorithm>
 #include <bit>
 #include <cassert>
