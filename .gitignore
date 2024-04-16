@@ -1,0 +1,7 @@
+algo/
+comp/
+.vscode/
+
+in
+*.pdf
+*.out
