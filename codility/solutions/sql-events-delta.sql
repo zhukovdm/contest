@@ -1,3 +1,5 @@
+-- events (event_type, value integer not null, time)
+
 SELECT FST.event_type AS event_type, (FST.value - SND.value) AS value FROM
 (
     SELECT * FROM events AS A
