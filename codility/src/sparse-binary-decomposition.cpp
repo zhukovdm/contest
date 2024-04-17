@@ -1,3 +1,7 @@
+/**
+ * https://app.codility.com/programmers/trainings/9/sparse_binary_decomposition/
+ */
+
 bool is_set(int n, int i)
 {
     return (n >> i) & 1;

@@ -1,3 +1,5 @@
+-- https://app.codility.com/programmers/trainings/6/sql_world_cup/
+
 -- teams (team_id, team_name)
 -- matches(match_id, host_team, guest_team, host_goals, guest_goals)
 

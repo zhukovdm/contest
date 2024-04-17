@@ -1,4 +1,9 @@
+/**
+ * https://app.codility.com/programmers/lessons/2-arrays/cyclic_rotation/
+ */
+
 #include <vector>
+
 using namespace std;
 
 vector<int> solution(vector<int> &a, int k)

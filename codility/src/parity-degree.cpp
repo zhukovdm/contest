@@ -1,3 +1,7 @@
+/**
+ * https://app.codility.com/programmers/trainings/5/parity_degree/
+ */
+
 int solution(int n)
 {
     int cnt = 0;

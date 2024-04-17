@@ -1,3 +1,7 @@
+/**
+ * https://app.codility.com/programmers/trainings/7/countries_count/
+ */
+
 #include <stack>
 #include <vector>
 

@@ -1,3 +1,7 @@
+/**
+ * https://app.codility.com/programmers/trainings/7/tree_longest_zig_zag/
+ */
+
 #include <algorithm>
 
 using namespace std;
