@@ -1,5 +1,11 @@
 /**
  * https://cses.fi/problemset/task/1084
+ *
+ * The idea is to place applicants greedily, because they stays in appartments
+ * forever. Better described at [1, 2].
+ *
+ * [1] https://www.geeksforgeeks.org/cses-solutions-apartments/
+ * [2] https://usaco.guide/problems/cses-1084-apartments/solution
  */
 
 #include <algorithm>
@@ -8,29 +14,27 @@
 #include <set>
 #include <vector>
 
+using namespace std;
+
 using ll = long long;
 using ul = unsigned long;
-using ull = unsigned long long;
 
 auto main(int argc, char **argv) -> int
 {
-    std::ios::sync_with_stdio(false);
-    std::cin.tie(nullptr);
-    std::cout.tie(nullptr);
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
 
-    int n, m, k;
-    std::cin >> n >> m >> k;
+    int n, m, k, ai, bi;
+    cin >> n >> m >> k;
 
-    std::vector<int> a, b;
+    vector<int> a, b;
 
     while (n--) {
-        int ai;
-        std::cin >> ai;
+        cin >> ai;
         a.push_back(ai);
     }
 
     while (m--) {
-        int bi;
         std::cin >> bi;
         b.push_back(bi);
     }
