@@ -1,6 +1,6 @@
 # compete
 
-This repository contains the source code of my attempts to solve problems from contests and problem sets available on the Internet.
+This repository contains the source code of my attempts to solve problems from contests and problem sets available online.
 
 To prepare environment, clone the `algo` repository.
 
