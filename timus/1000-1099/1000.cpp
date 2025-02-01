@@ -28,9 +28,6 @@
 #define debug(...) 42
 #endif
 
-std::array<int, 4> dx = {1, 0, -1, 0};
-std::array<int, 4> dy = {0, 1, 0, -1};
-
 auto main(int, char **) -> int
 {
     using namespace std;
