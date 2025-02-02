@@ -1,3 +1,7 @@
+"""
+    https://adventofcode.com/2023/day/1
+"""
+
 import sys, re
 from typing import List
 
