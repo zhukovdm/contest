@@ -1,3 +1,3 @@
 # LeetCode
 
-- https://leetcode.com/zhukovdm/
+- https://leetcode.com/
