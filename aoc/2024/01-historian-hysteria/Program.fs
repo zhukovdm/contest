@@ -4,11 +4,10 @@
     Answer: 1651298
 *)
 
+open System
 open System.IO
 
 type TwoArrays<'T> = { ls: 'T[]; rs: 'T[] }
-
-let parse = System.Int32.Parse
 
 let readLines path =
     seq {
@@ -26,8 +25,8 @@ let main argv =
         data
         |> Seq.toArray
         |> Array.choose (fun line ->
-            match line.Split(' ', System.StringSplitOptions.RemoveEmptyEntries) with
-            | [| l; r |] -> Some(parse l, parse r)
+            match line.Split(' ', StringSplitOptions.RemoveEmptyEntries) with
+            | [| l; r |] -> Some(Int32.Parse l, Int32.Parse r)
             | _ -> None)
         |> Array.fold
             (fun acc (l, r) ->
