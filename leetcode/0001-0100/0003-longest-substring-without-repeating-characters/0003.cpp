@@ -1,3 +1,7 @@
+/**
+ * https://leetcode.com/problems/longest-substring-without-repeating-characters/
+ */
+
 #include <algorithm>
 #include <bit>
 #include <cassert>
@@ -39,28 +43,31 @@ auto elapsed_time() -> double
 #endif
 
 class Solution {
-    vector<int> twoSum(vector<int> &nums, int target)
+public:
+    int lengthOfLongestSubstring(string s)
     {
-        unordered_map<int, int> seen;
+        size_t ptr = 0;
+        size_t res = 0;
+        map<char, size_t> map;
 
-        for (int i = 0; i < nums.size(); ++i) {
-            auto &&num = nums[i];
+        for (size_t i = 0; i < s.size(); ++i) {
+            auto &&ch = s[i];
+            auto &&it = map.find(ch);
 
-            auto diff = target - num;
-            auto iter = seen.find(diff);
-
-            // doplnek existuje
-            if (iter != seen.end()) {
-                return vector<int>{iter->second, i};
+            // repeated!
+            if (it != map.end()) {
+                if (it->second >= ptr) {
+                    res = max(res, i - ptr);
+                    ptr = it->second + 1;
+                }
+                else {
+                    // do nothing, because we have skipped this option already
+                }
             }
-
-            // doplnek neexistuje
-            else {
-                seen[num] = i;
-            }
+            map[ch] = i;
         }
 
-        throw exception(); // unreachable branch
+        return max(res, s.size() - ptr);
     }
 };
 

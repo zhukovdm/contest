@@ -1,3 +1,7 @@
+/**
+ * https://leetcode.com/problems/two-sum/
+ */
+
 #include <algorithm>
 #include <bit>
 #include <cassert>
@@ -39,31 +43,28 @@ auto elapsed_time() -> double
 #endif
 
 class Solution {
-public:
-    int lengthOfLongestSubstring(string s)
+    vector<int> twoSum(vector<int> &nums, int target)
     {
-        size_t ptr = 0;
-        size_t res = 0;
-        map<char, size_t> map;
+        unordered_map<int, int> seen;
 
-        for (size_t i = 0; i < s.size(); ++i) {
-            auto &&ch = s[i];
-            auto &&it = map.find(ch);
+        for (int i = 0; i < nums.size(); ++i) {
+            auto &&num = nums[i];
 
-            // repeated!
-            if (it != map.end()) {
-                if (it->second >= ptr) {
-                    res = max(res, i - ptr);
-                    ptr = it->second + 1;
-                }
-                else {
-                    // do nothing, because we have skipped this option already
-                }
+            auto diff = target - num;
+            auto iter = seen.find(diff);
+
+            // doplnek existuje
+            if (iter != seen.end()) {
+                return vector<int>{iter->second, i};
             }
-            map[ch] = i;
+
+            // doplnek neexistuje
+            else {
+                seen[num] = i;
+            }
         }
 
-        return max(res, s.size() - ptr);
+        throw exception(); // unreachable branch
     }
 };
 
