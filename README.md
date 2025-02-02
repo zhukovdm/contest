@@ -1,4 +1,4 @@
-# compete
+# contest
 
 This repository contains the source code of my attempts to solve problems from contests and problem sets available online.
 
